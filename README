@@ -12,9 +12,9 @@ java -jar JsTestDriver-1.2.2.jar --port 4224 --browser `which google-chrome` &
 
 and run the tests like this:
 
-java -jar JsTestDriver-1.2.2.jar --config config.cfg --tests all --reset --testOutput .
+java -jar JsTestDriver-1.2.2.jar --tests all --reset --testOutput .
 
 
 or just run this:
 
-java -jar media/js/JsTestDriver-1.2.2.jar --port 4224 --browser `which firefox`,`which google-chrome` --tests all --config media/js/config.cfg
+java -jar JsTestDriver-1.2.2.jar --port 4224 --browser `which firefox`,`which google-chrome` --tests all
