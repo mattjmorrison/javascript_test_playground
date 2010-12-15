@@ -5,16 +5,13 @@ To run these tests start a dev server like this:
 
 java -jar JsTestDriver-1.2.2.jar --port 4224 --browser `which firefox` &
 
-or this:
-
-java -jar JsTestDriver-1.2.2.jar --port 4224 --browser `which google-chrome` &
-
 
 and run the tests like this:
 
 java -jar JsTestDriver-1.2.2.jar --tests all --reset --testOutput .
 
-
 or just run this:
 
 java -jar JsTestDriver-1.2.2.jar --port 4224 --browser `which firefox`,`which google-chrome` --tests all
+
+or even better run the Makefile
