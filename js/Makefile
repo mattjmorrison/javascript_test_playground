@@ -1,9 +1,6 @@
-linux-start:
-	java -jar JsTestDriver-1.2.2.jar --port 9876 --browser `which google-chrome`
 
-mac-start:
-	java -jar JsTestDriver-1.2.2.jar --port 9876 &
+osx:
+	java -jar JsTestDriver-1.3.2.jar --port 9876 --browser /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome,/Applications/Firefox.app/Contents/MacOS/firefox --tests all
 
-mac-all-tests:
-	/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://localhost:9876/slave/1/RemoteConsoleRunnerquirks.html & 
-	java -jar JsTestDriver-1.2.2.jar --tests all
+linux:
+	java -jar JsTestDriver-1.3.2.jar --port 9876 --browser `which google-chrome`,`which firefox` --tests all
