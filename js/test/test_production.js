@@ -31,3 +31,20 @@ TestCase("GermanGreeterTests", {
 	}
 });
 
+
+TestCase("TestSample", {
+	testJQueryVersion: function(){
+		var thing = new sample.Sample();
+		assertEquals("1.5.2", thing.jqueryVersion());
+	},
+	testAppendingNode: function(){
+		var thing = new sample.Sample();
+		thing.addDivToBody();
+		assertEquals("hi", $('#new_node').html());
+	},
+	testEventOnNode: function(){
+		var thing = new sample.Sample();
+		thing.addEventToNewDiv();
+		assertSame(thing.eventNodeClickCallback, $('#event_node').data('events')['click']);
+	}
+});

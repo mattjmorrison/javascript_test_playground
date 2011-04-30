@@ -43,6 +43,33 @@ greeters.GermanGreeter.prototype.farewell = function(name) {
 })(greeters);
 
 
+var sample = {};
+(function($, module){
+
+	module.Sample = function(){
+		return {
+			jqueryVersion: function(){
+				return $().jquery;
+			},
+			addDivToBody: function(){
+				$('body').append($('<div id="new_node">hi</div>'));
+			},
+			addEventToNewDiv: function(){
+				$('body').append($('<div id="event_node">hi</div>'));
+				$('#event_node').click(function(){
+					alert("doing click stuff");
+					$('body').append($('<div>You clicked it'));					
+				});
+			},
+			eventNodeClickCallback: function(){
+				alert("doing click stuff");
+				$('body').append($('<div>You clicked it'));
+			}
+		};
+	};
+
+})(jQuery, sample);
+
 
 
 
